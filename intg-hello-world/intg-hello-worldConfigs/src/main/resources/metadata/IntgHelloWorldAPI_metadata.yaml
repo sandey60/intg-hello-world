@@ -1,0 +1,11 @@
+---
+key: "IntgHelloWorldAPI-1.0.0"
+name : "IntgHelloWorldAPI"
+displayName : "IntgHelloWorldAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/intghelloworld"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

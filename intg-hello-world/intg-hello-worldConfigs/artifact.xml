@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="IntgHelloWorldAPI" groupId="com.digitizethings.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/IntgHelloWorldAPI.xml</file>
+    </artifact>
+    <artifact name="IntgHelloWorldAPI_swagger" groupId="com.digitizethings.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/IntgHelloWorldAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="IntgHelloWorldAPI_metadata" groupId="com.digitizethings.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/IntgHelloWorldAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="IntgHelloWorldFulfillOrder" groupId="com.digitizethings.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/IntgHelloWorldFulfillOrder.xml</file>
+    </artifact>
+</artifacts>

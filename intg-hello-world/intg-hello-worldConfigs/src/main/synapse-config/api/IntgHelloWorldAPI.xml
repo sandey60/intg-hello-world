@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/intghelloworld" name="IntgHelloWorldAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/fulfillOrder">
+        <inSequence/>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
