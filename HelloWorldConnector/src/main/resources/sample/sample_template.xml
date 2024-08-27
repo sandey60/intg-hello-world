@@ -1,0 +1,10 @@
+<template xmlns="http://ws.apache.org/ns/synapse" name="sample_template">
+       <parameter name="orderId"/>
+        <sequence>
+                <property name="orderId" expression="$func:orderId"/>
+            	<log level="full">
+			<property name="orderId ::: " expression="$func:orderId"/>
+		</log>
+		<class name="org.wso2.carbon.esb.connector.helloWorldConnector" />
+        </sequence>
+</template>

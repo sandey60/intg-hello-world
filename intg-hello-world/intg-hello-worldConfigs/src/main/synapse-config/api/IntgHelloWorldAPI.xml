@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/intghelloworld" name="IntgHelloWorldAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/fulfillOrder">
+        <inSequence>
+            <filter regex="OPTIONS" source="get-property('axis2', 'HTTP_METHOD')">
+                <then>
+                    <respond/>
+                </then>
+                <else/>
+            </filter>
+            <sequence key="IntgHelloWorldFulfillOrder"/>
+            <property description="messageType: application/json" name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond description="API Response"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
