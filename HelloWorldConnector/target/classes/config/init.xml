@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template name="init" onError="fault" xmlns="http://ws.apache.org/ns/synapse">
-    <parameter defaultValue="" isMandatory="false" name="username"/>
-    <parameter defaultValue="" isMandatory="false" name="password"/>
-    <sequence/>
-</template>
