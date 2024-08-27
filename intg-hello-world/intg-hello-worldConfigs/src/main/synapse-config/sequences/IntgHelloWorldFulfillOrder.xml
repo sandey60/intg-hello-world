@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence name="IntgHelloWorldFulfillOrder" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-    <property description="orderId" name="orderId" scope="default" type="STRING" value="SOI7656401"/>
+    <property description="orderId" expression="$ctx:query.param.orderId" name="orderId" scope="default" type="STRING"/>
+    <log level="custom">
+        <property expression="get-property('orderId')" name="orderId"/>
+    </log>
     <helloWorld.sample_template>
         <orderId>{$ctx:orderId}</orderId>
     </helloWorld.sample_template>
     <log level="full"/>
     <property expression="get-property('axis2', 'HTTP_SC')" name="statusCode" scope="default" type="STRING"/>
-    <property description="Json Response" expression="json-eval($.responseBody)" name="responseBody" scope="default" type="STRING"/>
+    <property description="Json Response" expression="get-property('responseBody')" name="responseBody" scope="default" type="STRING"/>
     <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
-    <payloadFactory media-type="text">
+    <payloadFactory media-type="json">
         <format>
            $1
-</format>
+        </format>
         <args>
             <arg evaluator="xml" expression="get-property('responseBody')"/>
         </args>

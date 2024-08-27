@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <connector>
-    <component name="helloWorld" package="org.wso2.carbon.connector" >
+    <component name="helloWorld" package="com.digitizethings.sample" >
         <dependency component="config" />
         <dependency component="sample" />
-        <description>WSO2 helloWorld connector library</description>
+        <description>Digitizethings helloWorld connector library</description>
     </component>
     <icon>icon/icon-small.gif</icon>
 </connector>
